@@ -1,3 +1,10 @@
+### 0.0.3
+- Add default 'supported_color_modes' of 'brightness' in device / entity registration messages to stop throwing deprecation warnings (2025.3)
+- Changed 'object_id' to 'default_entity_id' in device / entity registration messages ('object_id' retained for older versions)
+- Add random delay (5-15s) after hass birth message before re-announcing device config and state.
+  - Fixes no devices after a hass restart
+- bumped min ver to get the fix out
+
 ### 0.0.2b2
 - Add restart button to export: unhidden after receiving success from submitting OTP button
 - Fix cached token reading: attempted to read a binary file in text mode

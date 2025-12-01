@@ -44,6 +44,7 @@ To perform a seamless migration from the old monolithic, non add-on setup:
 Visit the CyncLAN 'ingress' webpage (from the sidebar, or from the add-on page `Open Web UI` button). You will be greeted with a simple form that has provisions for being sent an OTP and to enter and submit the OTP.
 
 - The `Start Export` button will check for a cached access token and use it to export your device config, removing the need for an OTP email to be sent
+  - If no cached access token is found, the button will initiate the export process by sending your Cync account credentials to the Cync cloud API and requesting an OTP to be sent to your account email address
 - The `Submit OTP` button will evaluate the OTP textbox and send the OTP to the backend export server
     - You can also request an OTP from the Cync app and then use the Submit OTP button, bypassing the `Start Export` button.
     - After submitting an OTP, the backend will use the OTP and Cync account creds to generate a new access token
@@ -51,6 +52,14 @@ Visit the CyncLAN 'ingress' webpage (from the sidebar, or from the add-on page `
     - Cync cloud API supplies a refresh token, but I need to figure out the endpoint and data structure to use it for renewing access tokens 
 - The `Request OTP` button is for manually requesting an OTP to be sent to your Cync account email address, you should never really need to use this button
 - After a successful export, the `cync_mesh.yaml` contents will be displayed in a text-box with syntax highlighting (via PRISM) and a `Download Config File` button will be available to allow downloading the newly exported config
+  - The config file is saved to disk and the add-on will use it after a restart 
+
+## Update the underlying cync-lan library/script
+This repo does not hold the code for cync-lan, just the metadata for the add-on itself.
+The add-on Dockerfile pulls the actual cync-lan lib/script in during the build process.
+
+In order to update the underlying cync-lan library/script, you can use the `Rebuild` button on the add-ons `Info` page in Home Assistant.
+
 
 
 ## Tips / Troubleshooting
