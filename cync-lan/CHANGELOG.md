@@ -1,8 +1,11 @@
 ### 0.0.3b3
-- fix new logic in 'supported_color_modes'
+- Fix new logic in 'supported_color_modes'
+- Add device types: 17, 18 
+  - 2700K dimmable bulbs [CLED199L2]
+  - 18 may be the same bulb with a newer SoC
 
 ### 0.0.3b2
-- nothing of note
+- Nothing of note
 
 ### 0.0.3b1
 - Add default 'supported_color_modes' of 'brightness' in device / entity registration messages to stop throwing deprecation warnings (2025.3)
