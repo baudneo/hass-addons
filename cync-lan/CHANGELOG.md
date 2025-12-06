@@ -3,6 +3,8 @@
 - add device types 39, 57
   - 39: direct connect on/off paddle switch - neutral required
   - 57: direct connect on/off paddle switch - NO neutral required (same model # with a NN appended for No Neutral, good to know)
+- Updated Github notifications so I actually receive notifications of issues/PR's, etc.
+  - Sorry, I've been a bit stunned lately. Hopefully this is the last beta release before 0.0.3
 
 ### 0.0.3b3
 - Fix new logic in 'supported_color_modes'
