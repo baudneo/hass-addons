@@ -1,4 +1,10 @@
-### 0.0.3
+### 0.0.3b3
+- fix new logic in 'supported_color_modes'
+
+### 0.0.3b2
+- nothing of note
+
+### 0.0.3b1
 - Add default 'supported_color_modes' of 'brightness' in device / entity registration messages to stop throwing deprecation warnings (2025.3)
 - Changed 'object_id' to 'default_entity_id' in device / entity registration messages ('object_id' retained for older versions)
 - Add random delay (5-15s) after hass birth message before re-announcing device config and state.
