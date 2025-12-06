@@ -2,7 +2,7 @@
 - fix brightness scale (was 0-255, we want 0-100)
 - add device types 39, 57
   - 39: direct connect on/off paddle switch - neutral required
-  - 57: direct connect dimmer switch - NO neutral required (same model # with a NN appended for No Neutral, good to know)
+  - 57: direct connect on/off paddle switch - NO neutral required (same model # with a NN appended for No Neutral, good to know)
 
 ### 0.0.3b3
 - Fix new logic in 'supported_color_modes'
