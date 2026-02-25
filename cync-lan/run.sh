@@ -15,6 +15,7 @@ export CYNC_MQTT_PASS="$(bashio::config 'mqtt_pass')"
 export CYNC_TCP_WHITELIST="$(bashio::config 'tuning' | jq -r '.tcp_whitelist')"
 export CYNC_CMD_BROADCASTS="$(bashio::config 'tuning' | jq -r '.command_targets')"
 export CYNC_MAX_TCP_CONN="$(bashio::config 'tuning' | jq -r '.max_clients')"
+export CYNC_RAW_DEBUG="$(bashio::config 'raw_debug')"
 
 # when installing the cync_lan python package, pyproject.toml creates a cync-lan executable
 #cync-lan --enable-export

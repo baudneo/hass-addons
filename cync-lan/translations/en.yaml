@@ -25,8 +25,11 @@ configuration:
     name: Cync MQTT Topic
     description: The MQTT topic for Cync device messages
   debug_log_level:
-    name: Debug
+    name: Debug Logging
     description: "Enable debug level logging (default: false)"
+  raw_debug:
+    name: Binary Debug Logging
+    description: "Enable raw binary debug logging [very verbose] (default: false)"
   tuning:
     name: Tunables
     description: Tunables to dial-in command latency / how in-sync commands are across device groups
