@@ -44,7 +44,8 @@ ENV CYNC_HOST="0.0.0.0" \
     CYNC_MQTT_CONN_DELAY=10 \
     CYNC_CMD_BROADCASTS=2 \
     CYNC_MAX_TCP_CONN=8 \
-    CYNC_TCP_WHITELIST=""
+    CYNC_TCP_WHITELIST="" \
+    CYNC_OVERWRITE_CONFIG_FILE=yes
 
 # Copy data for add-on
 COPY static/ /root/cync-lan/www/
