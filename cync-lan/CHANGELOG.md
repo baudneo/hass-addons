@@ -1,3 +1,19 @@
+### 0.0.3b9
+- add `raw_debug` options to config. When enabled, will output binary data to/from TCP devices in the logs (VERY verbose)
+- fix device type 107: switch to light
+
+### 0.0.3b8
+- typo fix: `model-info` to `model_info`: GH mobile editor strikes again
+
+### 0.0.3b7
+- add device types 47, 71 and 107
+
+### 0.0.3b6
+- fix `functools.partial` error
+
+### 0.0.3b5
+- split switch and plug logic
+
 ### 0.0.3b4
 - fix brightness scale (was 0-255, we want 0-100)
 - add device types 39, 57
