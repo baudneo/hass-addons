@@ -39,6 +39,7 @@ options:
   account_username: null
   account_password: null
   debug_log_level: false
+  raw_debug: false
   mqtt_host: ""
   mqtt_port: 1883
   mqtt_user: ""
@@ -53,6 +54,7 @@ schema:
   account_username: email
   account_password: password
   debug_log_level: bool
+  raw_debug: bool
   mqtt_topic: str
   mqtt_host: str
   mqtt_port: port
