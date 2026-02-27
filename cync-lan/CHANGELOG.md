@@ -1,3 +1,6 @@
+### 0.0.3b10
+- Host tailwinds, animate.css and prism.js locally
+
 ### 0.0.3b9
 - add `raw_debug` options to config. When enabled, will output binary data to/from TCP devices in the logs (VERY verbose)
 - fix device type 107: switch to light
