@@ -18,6 +18,6 @@ export CYNC_MAX_TCP_CONN="$(bashio::config 'tuning' | jq -r '.max_clients')"
 export CYNC_RAW_DEBUG="$(bashio::config 'raw_debug')"
 
 # when installing the cync_lan python package, pyproject.toml creates a cync-lan executable
-#cync-lan --enable-export
+cync-lan
 # for some wierd reason, the cync-lan executable does not work in the add-on container all of a sudden
-python -c "from cync_lan.main import main; import asyncio; import uvloop; asyncio.set_event_loop_policy(uvloop.EventLoopPolicy()); main()" --enable-export
+#python -c "from cync_lan.main import main; import asyncio; import uvloop; asyncio.set_event_loop_policy(uvloop.EventLoopPolicy()); main()" --enable-export

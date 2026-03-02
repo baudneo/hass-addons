@@ -24,7 +24,7 @@ RUN set -x \
     && apk add --no-cache --no-interactive \
         git \
     && pip install --no-cache-dir -U pip \
-    && pip install --no-cache-dir "git+https://github.com/baudneo/cync-lan@hass_addon" \
+    && pip install --no-cache-dir "git+https://github.com/baudneo/cync-lan@python2lib" \
     && apk del --no-interactive --purge \
         git \
     && rm -rf /var/cache/apk/*
@@ -45,13 +45,15 @@ ENV CYNC_HOST="0.0.0.0" \
     CYNC_CMD_BROADCASTS=2 \
     CYNC_MAX_TCP_CONN=8 \
     CYNC_TCP_WHITELIST="" \
-    CYNC_OVERWRITE_CONFIG_FILE=yes
+    CYNC_OVERWRITE_CONFIG_FILE=yes \
+    CYNC_STATIC_DIR="/root/cync-lan/www" \
+    CYNC_BASE_DIR="/root/cync-lan" \
+    CYNC_CONFIG_DIR="/homeassistant/.storage/cync-lan/config"
 
 # Copy data for add-on
 COPY static/ /root/cync-lan/www/
 
-EXPOSE 23779
-EXPOSE 23778
+EXPOSE 23779 23778
 
 COPY run.sh /
 RUN chmod a+x /run.sh
