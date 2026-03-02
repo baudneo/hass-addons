@@ -1,12 +1,20 @@
+### 0.0.4b1
+- NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- The underlying cync-lan lib has been merged into one source. Before, 2 versions were maintained for HASS / regular docker images
+- Added support for device type: 67 -> Outdoor Dual Outlet Plug
+- Rewrote ID handling logic to allow multiple endpoints per node (device)
+- Aggressive online/offline handling causing false positive offline devices has been turned off. The byte seems to mean: haven't seen this BTLE endpoint report it's state in awhile' 
+- Refactoring and better online/offline handling ongoing
+- Ad-Guard DNS guide added to cync-lan DNS docs, thanks @[lbrpdx](https://github.com/baudneo/cync-lan/commits?author=lbrpdx)
+
 ### 0.0.3.b12
-- NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer.
 - Last checkpoint before merging underlying cync-lan libraries into one.
 
 ### 0.0.3b11
 - make sure the cync_mesh.yaml exported file is overwritten by default in the HASS image
 
 ### 0.0.3b10
-- Host tailwinds, animate.css and prism.js locally
+- Host tailwinds, animate.css and prism.js locally, removing the internet requirement to render the export page
 
 ### 0.0.3b9
 - add `raw_debug` options to config. When enabled, will output binary data to/from TCP devices in the logs (VERY verbose)
