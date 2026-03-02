@@ -1,5 +1,8 @@
-### 0.0.3b11
+### 0.0.3.b12
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer.
+- Last checkpoint before merging underlying cync-lan libraries into one.
+
+### 0.0.3b11
 - make sure the cync_mesh.yaml exported file is overwritten by default in the HASS image
 
 ### 0.0.3b10
