@@ -1,11 +1,16 @@
 ### 0.0.4b1
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - The underlying cync-lan lib has been merged into one source. Before, 2 versions were maintained for HASS / regular docker images
-- Added support for device type: 67 -> Outdoor Dual Outlet Plug
-- Rewrote ID handling logic to allow multiple endpoints per node (device)
-- Aggressive online/offline handling causing false positive offline devices has been turned off. The byte seems to mean: haven't seen this BTLE endpoint report it's state in awhile' 
-- Refactoring and better online/offline handling ongoing
+- Refactored ID handling logic to allow multiple endpoints per node
+- Changed logic to view a physical Cync device as a `node` and endpoints as logical representations of the device state; allows multi-endpoint per node logic cleanly
+- Aggressive online/offline handling causing false positive offline devices has been turned off while I investigate 
 - Ad-Guard DNS guide added to cync-lan DNS docs, thanks @[lbrpdx](https://github.com/baudneo/cync-lan/commits?author=lbrpdx)
+- Add device types: 9, 47, 51, 71 and 107
+  - Support for device type: 67 -> Outdoor Dual Outlet Plug; required logic change to Node and endpoints
+- MeshInfo response pagination fix; some devices/nodes stream the MeshInfo response over multiple packets, some devices send it all in one packet
+- Refactoring and better online/offline handling ongoing
+  - You may notice differences from < 0.0.4, please open issues for missing/broken/incomplete functionality
+  - I am taking time to work on the code base, so now would be a good time for FRs, rants, criticism, etc.  
 
 ### 0.0.3.b12
 - Last checkpoint before merging underlying cync-lan libraries into one.
