@@ -40,7 +40,7 @@ options:
   account_password: null
   debug_log_level: false
   raw_debug: false
-  mqtt_host: ""
+  mqtt_host: "homeassistant.local"
   mqtt_port: 1883
   mqtt_user: ""
   mqtt_pass: ""
