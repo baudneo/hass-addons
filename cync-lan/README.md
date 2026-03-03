@@ -1,5 +1,5 @@
 >[!IMPORTANT]
-> DNS redirection is REQUIRED, please see [here](https://github.com/baudneo/cync-lan-addon/tree/dev/docs/DNS.md) for documentation and examples
+> DNS redirection is REQUIRED, please see [here](https://github.com/baudneo/cync-lan/tree/python/docs/DNS.md) for documentation and examples
 
 ![Local Push Polling][polling-shield]
 
