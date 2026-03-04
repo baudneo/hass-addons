@@ -32,7 +32,7 @@ RUN set -x \
 ENV CYNC_HOST="0.0.0.0" \
     CYNC_DEBUG=0 \
     CYNC_RAW_DEBUG=0 \
-    CYNC_TOPIC="cync_lan_addon" \
+    CYNC_TOPIC="cync_lan_hass" \
     CYNC_MQTT_PORT=1883 \
     CYNC_MQTT_HOST="homeassistant.local" \
     CYNC_MQTT_USER="" \
