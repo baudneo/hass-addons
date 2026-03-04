@@ -50,7 +50,7 @@ ENV CYNC_HOST="0.0.0.0" \
     CYNC_STATIC_DIR="/root/cync-lan/www" \
     CYNC_CONFIG_DIR="/homeassistant/.storage/cync-lan/config"
 
-# Copy data for add-on
+# Copy data for app
 COPY static/ /root/cync-lan/www/
 
 EXPOSE 23779 23778

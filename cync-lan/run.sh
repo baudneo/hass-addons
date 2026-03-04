@@ -2,8 +2,8 @@
 # shellcheck shell=bash
 LP='[run.sh]'
 
-bashio::log.info "${LP} Starting CyncLAN Bridge Add-On"
-# pull values from the add-on configuration
+bashio::log.info "${LP} Starting CyncLAN Bridge App"
+# pull values from the app configuration
 export CYNC_ACCOUNT_USERNAME="$(bashio::config 'account_username')"
 export CYNC_ACCOUNT_PASSWORD="$(bashio::config 'account_password')"
 export CYNC_TOPIC="$(bashio::config 'mqtt_topic')"
@@ -19,6 +19,6 @@ export CYNC_RAW_DEBUG="$(bashio::config 'raw_debug')"
 
 # when installing the cync_lan python package, pyproject.toml creates a cync-lan executable
 #cync-lan
-# for some wierd reason, the cync-lan executable does not work in the add-on container all of a sudden
+# for some wierd reason, the cync-lan executable does not work in the app container all of a sudden
 #python -c "from cync_lan.main import main; import asyncio; import uvloop; asyncio.set_event_loop_policy(uvloop.EventLoopPolicy()); main()" --enable-export
 python -c "from cync_lan.main import main; main()"

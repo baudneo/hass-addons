@@ -4,7 +4,7 @@ build_from:
   aarch64: ghcr.io/home-assistant/aarch64-base-python:latest
   amd64: ghcr.io/home-assistant/amd64-base-python:latest
 labels:
-  org.opencontainers.image.title: "CyncLAN Bridge - Home Assistant Add-on"
+  org.opencontainers.image.title: "CyncLAN Bridge - Home Assistant App"
   org.opencontainers.image.description: "Local MQTT controller for Cync/C by GE smart devices (DNS redirection required)"
   org.opencontainers.image.source: "https://github.com/baudneo/hass-addons"
   org.opencontainers.image.licenses: "MIT"

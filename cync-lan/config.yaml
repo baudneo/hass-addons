@@ -33,7 +33,7 @@ panel_title: "CyncLAN"
 # homeassistant_api: true
 
 #environment:
-#  TEST_VAR_111: "test_value_111 from add-on config.yaml environment dict"
+#  TEST_VAR_111: "test_value_111 from app config.yaml environment dict"
 
 options:
   account_username: null
