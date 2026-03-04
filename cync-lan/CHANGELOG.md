@@ -4,13 +4,12 @@
 - Refactored ID handling logic to allow multiple endpoints per node
 - Changed logic to view a physical Cync device as a `node` and endpoints as logical representations of the device state; allows multi-endpoint per node logic cleanly
 - Aggressive online/offline handling causing false positive offline devices has been turned off while I investigate 
-- Ad-Guard DNS guide added to cync-lan DNS docs, thanks @[lbrpdx](https://github.com/baudneo/cync-lan/commits?author=lbrpdx)
-- Add device types: 9, 47, 51, 71 and 107
+- [Ad-Guard DNS guide](https://github.com/baudneo/cync-lan/blob/python/docs/DNS.md#adguard-home) added to cync-lan DNS docs, thanks @[lbrpdx](https://github.com/baudneo/cync-lan/commits?author=lbrpdx)
+- Add device types: 9, 47, 51, 67, 71 and 107
   - Support for device type: 67 -> Outdoor Dual Outlet Plug; required logic change to Node and endpoints
 - MeshInfo response pagination fix; some devices/nodes stream the MeshInfo response over multiple packets, some devices send it all in one packet
 - Refactoring and better online/offline handling ongoing
-  - You may notice differences from < 0.0.4, please open issues for missing/broken/incomplete functionality
-  - I am taking time to work on the code base, so now would be a good time for FRs, rants, criticism, etc.  
+  - You may notice differences from < 0.0.4, please open issues for missing/broken/incomplete functionality 
 
 ### 0.0.3.b12
 - Last checkpoint before merging underlying cync-lan libraries into one.
