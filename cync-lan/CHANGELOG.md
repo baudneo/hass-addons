@@ -1,3 +1,15 @@
+### 0.0.4b3
+- Add better logging for unknown deviceType's; devices CyncLAN has not seen before.
+  - Before, things would 'just work' by brute force for unknown deviceTypes. Now, due to better class handling, we need \
+  to know if the device is a light or a switch/plug/fan controller/thermostat/multi-endpoint device for things to work \
+  as expected.
+  - This requires adding unknown/unseen device `type` to the `device_info` hash map, devices that worked before 0.0.4 \
+  **MAY NOT** work in > 0.0.4.
+  - This is an easy fix, open an issue with the log line that has the device `type` number and a brief explanation of \
+  what the device is and its capabilities: https://github.com/baudneo/cync-lan/issues/12
+  - While I understand that this is annoying, this is better for everyone in the long run and as a perk to you, you \
+  will get a better detailed MQTT device info page
+
 ### 0.0.4b2
 - Fix unassigned var name type: name -> dev_name in config export process
 
