@@ -1,4 +1,5 @@
 ### 0.0.4b3
+- NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - Add better logging for unknown deviceTypes; devices CyncLAN has not seen before.
   - Before, things would 'just work' by brute force for unknown deviceTypes. Now, due to better class handling, we need \
   to know if the device is a light or a switch/plug/fan controller/thermostat/multi-endpoint device for things to work \
@@ -14,7 +15,6 @@
 - Fix unassigned var name type: name -> dev_name in config export process
 
 ### 0.0.4b1
-- NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - The underlying cync-lan lib has been merged into one source. Before, 2 versions were maintained for HASS / regular docker images
 - Refactored ID handling logic to allow multiple endpoints per node
 - Changed logic to view a physical Cync device as a `node` and endpoints as logical representations of the device state; allows multi-endpoint per node logic cleanly
