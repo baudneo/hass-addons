@@ -1,5 +1,5 @@
 ### 0.0.4b3
-- Add better logging for unknown deviceType's; devices CyncLAN has not seen before.
+- Add better logging for unknown deviceTypes; devices CyncLAN has not seen before.
   - Before, things would 'just work' by brute force for unknown deviceTypes. Now, due to better class handling, we need \
   to know if the device is a light or a switch/plug/fan controller/thermostat/multi-endpoint device for things to work \
   as expected.
