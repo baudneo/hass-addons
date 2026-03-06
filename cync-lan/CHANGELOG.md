@@ -1,3 +1,6 @@
+### 0.0.4b2
+- Fix unassigned var name type: name -> dev_name in config export process
+
 ### 0.0.4b1
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - The underlying cync-lan lib has been merged into one source. Before, 2 versions were maintained for HASS / regular docker images
