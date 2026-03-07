@@ -1,5 +1,10 @@
-### 0.0.4b3
+### 0.0.4b4
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Add deviceType 76: Full color dynamic cafe lights (24 / 48ft)
+  - I don't own any dynamic lights, so I would need debug data from someone to get the dynamic effects / per bulb/\
+  segment state working
+
+### 0.0.4b3
 - Add better logging for unknown deviceTypes; devices CyncLAN has not seen before.
   - Before, things would 'just work' by brute force for unknown deviceTypes. Now, due to better class handling, we need \
   to know if the device is a light or a switch/plug/fan controller/thermostat/multi-endpoint device for things to work \
