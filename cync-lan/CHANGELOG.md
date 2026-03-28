@@ -1,5 +1,16 @@
-### 0.0.4b5
+### 0.0.4b6
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- DNS redirection guide for TP-Link Omada Controller, thanks [dnguyen800](https://github.com/dnguyen800)
+- [Fan controllers moved from a 0-255](https://github.com/baudneo/cync-lan/commit/6a66d5557066bf4ff9acc0f1abcc6b13e1bf21fb) binary range to using a percentage style 0-100. Thanks @[tobyroworth](https://github.com/baudneo/cync-lan/commits?author=tobyroworth)
+  - It's possible that anyone on older firmware may see issues, open an issue and we can try a firmware filter
+
+- Added logic for older (abandoned?) GE Sol lamp device. Thanks @[lukabratzee](https://github.com/Lukabratzee)
+  - [This PR contains code written by Claude sonnet](https://github.com/baudneo/cync-lan/pull/20). I am not levying any sort of opinion, just being transparent as\
+  people seem to want disclosure of this sort of thing
+  - This may also allow backwards compatibility for anyone using old firmware devices
+
+
+### 0.0.4b5
 - Add deviceType 72: Full Color Dynamic Effects Premium Light Strip (16 / 32ft)
   - I don't own any dynamic lights, so I would need debug data from someone to get the dynamic effects / per bulb/\
     segment state working
