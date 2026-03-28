@@ -5,15 +5,13 @@
   - It's possible that anyone on older firmware may see issues, open an issue and we can try a firmware filter
 
 - Added logic for older (abandoned?) GE Sol lamp device. Thanks @[lukabratzee](https://github.com/Lukabratzee)
-  - [This PR contains code written by Claude sonnet](https://github.com/baudneo/cync-lan/pull/20). I am not levying any sort of opinion, just being transparent as\
-  people seem to want disclosure of this sort of thing
+  - [This PR contains code written by Claude sonnet](https://github.com/baudneo/cync-lan/pull/20). I am not levying any sort of opinion, just being transparent as people seem to want disclosure of this sort of thing
   - This may also allow backwards compatibility for anyone using old firmware devices
 
 
 ### 0.0.4b5
 - Add deviceType 72: Full Color Dynamic Effects Premium Light Strip (16 / 32ft)
-  - I don't own any dynamic lights, so I would need debug data from someone to get the dynamic effects / per bulb/\
-    segment state working
+  - I don't own any dynamic lights, so I would need debug data from someone to get the dynamic effects / per bulb/ segment state working
   - There is a MITM proxy in the works to facilitate binary debugging for new functionality from unseen devices.
   
 ### 0.0.4b4
