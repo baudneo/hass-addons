@@ -1,5 +1,9 @@
-### 0.0.4b7
+### 0.0.4b8
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Initial support for thermostat related quirks concerning non-thermostat devices
+  - This does not add support for the thermostat, only allows exporting and controlling non-thermostat devices that are affected by a thermostat related quirk in their raw deviceID 
+
+### 0.0.4b7
 - Fix multi endpoint device export logic; pydantic dataclass was exported as yaml rather than the expected format
 
 ### 0.0.4b6
