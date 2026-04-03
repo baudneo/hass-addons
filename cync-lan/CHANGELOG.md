@@ -1,5 +1,8 @@
-### 0.0.4b6
+### 0.0.4b7
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Fix multi endpoint device export logic; pydantic dataclass was exported as yaml rather than the expected format
+
+### 0.0.4b6
 - DNS redirection guide for TP-Link Omada Controller, thanks [dnguyen800](https://github.com/dnguyen800)
 - [Fan controllers moved from a 0-255](https://github.com/baudneo/cync-lan/commit/6a66d5557066bf4ff9acc0f1abcc6b13e1bf21fb) binary range to using a percentage style 0-100. Thanks @[tobyroworth](https://github.com/baudneo/cync-lan/commits?author=tobyroworth)
   - It's possible that anyone on older firmware may see issues, open an issue and we can try a firmware filter
