@@ -1,5 +1,8 @@
-### 0.0.4b9
+### 0.0.4b10
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Add deviceType 125: Paddle switch
+
+### 0.0.4b9
 - Add deviceType 40: Paddle switch
 
 ### 0.0.4b8
