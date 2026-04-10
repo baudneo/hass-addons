@@ -1,5 +1,8 @@
-### 0.0.4b10
+### 0.0.4b11
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Add deviceType 128: 2700K A19 bulb
+
+### 0.0.4b10
 - Add deviceType 125: Paddle switch
 
 ### 0.0.4b9
