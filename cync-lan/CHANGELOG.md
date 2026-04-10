@@ -1,5 +1,8 @@
-### 0.0.4b8
+### 0.0.4b9
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Add deviceType 40: Paddle switch
+
+### 0.0.4b8
 - Initial support for thermostat related quirks concerning non-thermostat devices
   - This does not add support for the thermostat, only allows exporting and controlling non-thermostat devices that are affected by a thermostat related quirk in their raw deviceID 
 

@@ -48,7 +48,8 @@ ENV CYNC_HOST="0.0.0.0" \
     CYNC_OVERWRITE_CONFIG_FILE=yes \
     CYNC_BASE_DIR="/root/cync-lan" \
     CYNC_STATIC_DIR="/root/cync-lan/www" \
-    CYNC_CONFIG_DIR="/homeassistant/.storage/cync-lan/config"
+    CYNC_CONFIG_DIR="/homeassistant/.storage/cync-lan/config" \
+    CYNC_HASS_APP="yes"
 
 # Copy data for app
 COPY static/ /root/cync-lan/www/
