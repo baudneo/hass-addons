@@ -1,5 +1,8 @@
-### 0.0.4b11
+### 0.0.4b12
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Add missing adjustable brightness to deviceType 125
+
+### 0.0.4b11
 - Add deviceType 128: 2700K A19 bulb
 
 ### 0.0.4b10
