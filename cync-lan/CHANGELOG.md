@@ -1,5 +1,9 @@
-### 0.0.4b12
+### 0.0.4b13
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- DONT UPGRADE, this is a test for targeting cync groups/rooms
+  - stephenwall-95 please test
+
+### 0.0.4b12
 - Add missing adjustable brightness to deviceType 125
 
 ### 0.0.4b11
