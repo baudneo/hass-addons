@@ -1,5 +1,16 @@
-### 0.0.4b14
+### 0.0.5b1
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- BREAKING CHANGES:
+  - Any automations or other logic relying on Cync switches being registered as `switch`es will need to be updated to use `light` instead.
+- Cync switches are now exposed as `light` entities in Home Assistant.
+  - This *should* allow for controlling Cync app rooms/groups; cync-lan will not be aware of what devices are part of what groups/rooms as the idea is to send the light switch commands (you will know what switch controls what devices).
+  - You *should* be able to send the light switch RGB, brightness or white temp commands and the Cync group will change in unison, just like they do in the Cync app when you control a group/room, or a physical button press.
+  - This assumes you have the switch setup to control the Cync devices logically instead of turning the mains power on/off to the circuit. It is untested with the latter.
+  - Is there interest in instead of exposing switches as lights, expose the switches as switches and then also expose a light entity to control the group/room? Open an issue to discuss.
+- Only the fan controller is still exposed as a switch, I dont have one to test if it can be grouped with other devices and targeted with RGB, etc. commands.
+  - If you own a fan controller and can group it with other devices in the Cync app and then the fan controller can be used to control those Cync devices, please open an issue and we can try figuring something out. 
+
+### 0.0.4b14
 - DONT UPGRADE, this is a test for targeting cync groups/rooms
   - stephenwall-95 please test
   - typo: Light -> LIGHT
