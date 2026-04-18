@@ -1,4 +1,7 @@
 # CyncLAN Bridge
+
+Huge thanks to [@CodeNeedsCoffee](https://github.com/CodeNeedsCoffee) for the initial work on the App!
+
 CyncLAN bridge is a software stack that allows Home Assistant to communicate with Cync (formerly C by GE) 
 smart devices over a local network connection, bypassing the need for cloud services.
 This app uses MQTT for communication and supports auto-discovery of devices in Home Assistant.

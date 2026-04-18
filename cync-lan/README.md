@@ -14,6 +14,8 @@
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
+Huge thanks to [@CodeNeedsCoffee](https://github.com/CodeNeedsCoffee) for the initial work on the App!
+
 CyncLAN is a software stack 'bridge' for Cync / C by GE smart devices, allowing you to control **supported** smart devices directly from Home Assistant.
 
 This add-on provides:
