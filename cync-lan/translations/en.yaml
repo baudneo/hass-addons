@@ -3,6 +3,9 @@ network:
   23778/tcp: Port used for the web interface to export devices (ingress)
 
 configuration:
+  secret_key:
+    name: Encryption key for cloud token cache
+    description: Random string used to encrypt the Cync cloud access token at rest. Required if the exporter is enabled.
   account_username:
     name: Cync Account Username
     description: The email address used for your Cync account

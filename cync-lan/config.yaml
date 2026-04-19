@@ -36,6 +36,7 @@ panel_title: "CyncLAN"
 #  TEST_VAR_111: "test_value_111 from app config.yaml environment dict"
 
 options:
+  secret_key: null
   account_username: null
   account_password: null
   debug_log_level: false
@@ -51,6 +52,7 @@ options:
     max_clients: 8
 
 schema:
+  secret_key: str
   account_username: email
   account_password: password
   debug_log_level: bool

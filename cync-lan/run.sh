@@ -4,6 +4,7 @@ LP='[run.sh]'
 
 bashio::log.info "${LP} Starting CyncLAN Bridge App"
 # pull values from the app configuration
+export CYNC_SECRET_KEY="$(bashio::config 'secret_key')"
 export CYNC_ACCOUNT_USERNAME="$(bashio::config 'account_username')"
 export CYNC_ACCOUNT_PASSWORD="$(bashio::config 'account_password')"
 export CYNC_TOPIC="$(bashio::config 'mqtt_topic')"

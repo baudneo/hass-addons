@@ -1,3 +1,10 @@
+### 0.0.5b2
+- NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- BREAKING CHANGES:
+  - Add encryption for the cloud token cache at rest; Fernet with static seeded PBKDF2HMAC key.
+  - REQUIRES: Setting a random alphanumeric string for CYNC_SECRET_KEY in the App config
+
+
 ### 0.0.5b1
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - BREAKING CHANGES:
