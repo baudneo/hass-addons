@@ -1,12 +1,14 @@
-### 0.0.5b2
+### 0.0.5b3
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- add deviceType's 53, 56, 155, 170
+
+### 0.0.5b2
 - BREAKING CHANGES:
   - Add encryption for the cloud token cache at rest; Fernet with static seeded PBKDF2HMAC key.
   - REQUIRES: Setting a random alphanumeric string for CYNC_SECRET_KEY in the App config
 
 
 ### 0.0.5b1
-- NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - BREAKING CHANGES:
   - Any automations or other logic relying on Cync switches being registered as `switch`es will need to be updated to use `light` instead.
 - Cync switches are now exposed as `light` entities in Home Assistant.
