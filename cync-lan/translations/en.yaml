@@ -33,6 +33,18 @@ configuration:
   raw_debug:
     name: Binary Debug Logging
     description: "Enable raw binary debug logging [very verbose] (default: false)"
+  app_mitm_log:
+    name: App MITM Logging
+    description: "Log MITM proxy requests from/to all Cync app instances (default: false)"
+  app_mitm_console:
+    name: App MITM Console
+    description: "Show MITM proxy requests from/to all Cync app instances in the log console (default: true)"
+  dev_mitm_console:
+    name: Device MITM Console
+    description: "Show MITM proxy requests from/to all Cync devices in the log console (default: true)"
+  cync_cloud_ip:
+    name: Cync Cloud IP
+    description: "The IP address of the Cync cloud server (default: 34.73.130.191)"
   tuning:
     name: Tunables
-    description: Tunables to dial-in command latency / how in-sync commands are across device groups
+    description: Tunables to dial-in command latency

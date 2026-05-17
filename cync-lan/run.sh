@@ -17,6 +17,10 @@ export CYNC_TCP_WHITELIST="$(bashio::config 'tuning' | jq -r '.tcp_whitelist')"
 export CYNC_CMD_BROADCASTS="$(bashio::config 'tuning' | jq -r '.command_targets')"
 export CYNC_MAX_TCP_CONN="$(bashio::config 'tuning' | jq -r '.max_clients')"
 export CYNC_RAW_DEBUG="$(bashio::config 'raw_debug')"
+export CYNC_CLOUD_IP="$(bashio::config 'cync_cloud_ip')"
+export CYNC_MITM_DEV_LOGGER="$(bashio::config 'dev_mitm_console')"
+export CYNC_MITM_APP_LOGGER="$(bashio::config 'app_mitm_console')"
+export CYNC_APP_MITM_LOGGING="$(bashio::config 'app_mitm_log')"
 
 # when installing the cync_lan python package, pyproject.toml creates a cync-lan executable
 #cync-lan
