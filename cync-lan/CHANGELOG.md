@@ -1,5 +1,8 @@
-### 0.0.6b2
+### 0.0.6b3
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Fix stop_mitm() method, now reverts device back to normal operation on being turned off
+
+### 0.0.6b2
 - Fix unbound error on MITM activation
 
 ### 0.0.6b1
