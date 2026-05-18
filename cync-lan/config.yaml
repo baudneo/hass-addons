@@ -1,5 +1,5 @@
 name: "CyncLAN Bridge"
-version: "0.0.6b3"
+version: "0.0.6b4"
 slug: "cync-lan"
 description: "Local controller for Cync/C by GE smart devices (DNS redirection required)"
 arch:
@@ -40,6 +40,7 @@ options:
   account_username: null
   account_password: null
   debug_log_level: false
+  mqtt_debug: false
   raw_debug: false
   mqtt_host: "homeassistant.local"
   mqtt_port: 1883
@@ -61,6 +62,7 @@ schema:
   account_password: password
   debug_log_level: bool
   raw_debug: bool
+  mqtt_debug: bool
   mqtt_topic: str
   mqtt_host: str
   mqtt_port: port

@@ -33,6 +33,9 @@ configuration:
   raw_debug:
     name: Binary Debug Logging
     description: "Enable raw binary debug logging [very verbose] (default: false)"
+  mqtt_debug:
+    name: MQTT Debug Logging
+    description: "Enable debug logging for MQTT messages [cuts down on log spam when off] (default: false)"
   app_mitm_log:
     name: App MITM Logging
     description: "Log MITM proxy requests from/to all Cync app instances (default: false)"
