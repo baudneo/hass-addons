@@ -16,6 +16,7 @@
 - Cloud API refresh token logic added
 - Packet building logic refactoring
 - Optimizations
+- Add deviceType 151: Soft white decorative candle light (thanks [@tobyroworth](https://github.com/baudneo/cync-lan/commits?author=tobyroworth))
 
 ### 0.0.5b3
 - add deviceType's 53, 56, 155, 170
