@@ -1,5 +1,10 @@
 ### 0.0.6b5
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Fix firmware parsing (*hopefully*)
+- Fix non-awaited `remove_mitm_button()` method
+  - add logic check for `self.node`
+
+### 0.0.6b5
 - Fix dynamic firmware parsing and _update_app_stats
 - Add verbose logging to track weird edge case
 
