@@ -1,5 +1,18 @@
-### 0.0.6b10
+### 0.0.6b12
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
+- Add fan controller percentage slider state updates, will snap to quarter points
+  - Percentage is converted to preset:
+    - 0% = OFF
+    - 1-25% = LOW
+    - 26-50% = MEDIUM
+    - 51-75% = HIGH
+    - 76-100% = MAX
+    - 2%, 13% or 23% will snap to 25% and be set to LOW
+
+### 0.0.6b11
+- Fixes for fan controller PRESET state updates; sub_id parameter missing
+
+### 0.0.6b10
 - Fix unbound `tgt_id`
 
 ### 0.0.6b9
@@ -12,12 +25,11 @@
 - Use a devices configured kelvin range for white temp conversions instead of hardcoded 2-7k range
 
 ### 0.0.6b7
-- Fix command packet builder; restore changing brightness, white temp and RGB for non-plug devices.
+- Fix command packet builder; restore changing brightness, white temp and RGB for non-plug devices
 
 ### 0.0.6b6
-- Fix firmware parsing (*hopefully*)
+- Fix firmware parsing
 - Fix non-awaited `remove_mitm_button()` method
-  - add logic check for `self.node`
 
 ### 0.0.6b5
 - Fix dynamic firmware parsing and _update_app_stats
@@ -49,13 +61,12 @@
 - Add deviceType 151: Soft white decorative candle light (thanks [@tobyroworth](https://github.com/baudneo/cync-lan/commits?author=tobyroworth))
 
 ### 0.0.5b3
-- add deviceType's 53, 56, 155, 170
+- add deviceTypes 53, 56, 155, 170
 
 ### 0.0.5b2
 - BREAKING CHANGES:
   - Add encryption for the cloud token cache at rest; Fernet with static seeded PBKDF2HMAC key.
   - REQUIRES: Setting a random alphanumeric string for CYNC_SECRET_KEY in the App config
-
 
 ### 0.0.5b1
 - BREAKING CHANGES:
