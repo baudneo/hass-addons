@@ -1,3 +1,16 @@
+### 0.0.8b1.dev1 (pre-release, refactor test)
+- TEST BUILD of the `claude-refactor` branch of cync-lan: a large reliability refactor done with Claude Code. Back up first
+  and report problems at https://github.com/baudneo/cync-lan/issues
+- Packets are reassembled from the TCP stream properly (split/merged reads no longer corrupt or drop packets)
+- A bad packet no longer drops the device connection; devices that hang up are cleaned up immediately
+- MQTT reconnects with backoff after a broker restart, devices go unavailable in HASS if the app crashes,
+  the MITM switch survives reconnects, and commands are validated
+- The app exits (and the Supervisor restarts it) if a service crashes, instead of idling
+- Bad entries in the config / cloud export are skipped and logged instead of aborting everything
+- Model info fixes (model numbers and wattage that were never displayed now are)
+- New diagnostics counters on `<topic>/status/bridge/stats`
+- The version carries `.dev1` on purpose (valid PEP 440): it is offered as an update over 0.0.7b3 and is superseded by the real 0.0.8b1
+
 ### 0.0.7b3
 - NOTE: always backup, I am a carpenter who does this in my spare time, not a software engineer
 - All fixes thanks to [crdson93](https://github.com/crdson93)
