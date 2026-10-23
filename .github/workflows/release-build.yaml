@@ -1,0 +1,83 @@
+name: Build and publish cync-lan images
+
+# Builds the multi-arch cync-lan add-on images and pushes them to GHCR.
+#  - automatically when a GitHub release is published
+#  - on demand (Actions -> Run workflow), e.g. for a hot fix. Set `push` to false for a build-only check
+#    and `cync_lan_ref` to build a different baudneo/cync-lan branch, tag or sha than the Dockerfile default.
+# NOTE: cync-lan/config.yaml has no `image:` key, so Home Assistant still builds the add-on locally; these
+# images are not used until that key is added (see README / PR notes).
+
+on:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+    inputs:
+      cync_lan_ref:
+        description: "baudneo/cync-lan git ref to install (empty = Dockerfile default)"
+        required: false
+        default: ""
+        type: string
+      push:
+        description: "Push the images to GHCR (uncheck for a build-only test)"
+        required: false
+        default: true
+        type: boolean
+
+env:
+  ADDON_DIR: cync-lan
+  IMAGE_NAME: addon-cync-lan
+
+jobs:
+  build:
+    name: Build ${{ matrix.arch }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [ "aarch64", "amd64", "armhf", "armv7", "i386" ]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Override the cync-lan ref
+        if: ${{ inputs.cync_lan_ref != '' }}
+        env:
+          REF: ${{ inputs.cync_lan_ref }}
+        run: |
+          # refs are restricted to the characters git allows in branch/tag names and shas
+          [[ "$REF" =~ ^[A-Za-z0-9._/-]+$ ]] || { echo "invalid ref"; exit 1; }
+          sed -i "s|^ARG CYNC_LAN_REF=.*|ARG CYNC_LAN_REF=${REF}|" "${ADDON_DIR}/Dockerfile"
+          grep -n "^ARG CYNC_LAN_REF" "${ADDON_DIR}/Dockerfile"
+
+      - name: Decide whether to push
+        id: mode
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.push }}" != "true" ]]; then
+            echo "args=--test" >> "$GITHUB_OUTPUT"
+            echo "push=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "args=" >> "$GITHUB_OUTPUT"
+            echo "push=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Login to GitHub Container Registry
+        if: steps.mode.outputs.push == 'true'
+        uses: docker/login-action@v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build ${{ matrix.arch }} image
+        uses: home-assistant/builder@2025.03.0
+        with:
+          args: |
+            ${{ steps.mode.outputs.args }} \
+            --${{ matrix.arch }} \
+            --target /data/${{ env.ADDON_DIR }} \
+            --image "{arch}-${{ env.IMAGE_NAME }}" \
+            --docker-hub "ghcr.io/${{ github.repository_owner }}" \
+            --addon
