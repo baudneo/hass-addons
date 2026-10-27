@@ -1,3 +1,13 @@
+### 0.0.8b1.dev2 (pre-release, refactor test)
+- **CyncLAN is now maintained and deployed with Claude (AI).** A human wrote it from raw hex, by hand. The AI now does the upkeep: it refactors, writes the tests and keeps it reliable, and a human reviews every change.
+- TEST BUILD: back up first, report problems at https://github.com/baudneo/cync-lan/issues
+- Devices cut off at the wall go offline more reliably (distinct-bridge majority vote, re-checked when a connection drops); thanks [crdson93](https://github.com/crdson93)
+- Connection limit counts only live bridges, and rejected devices that reconnect no longer leak sockets; thanks crdson93
+- Light shows: music shows, custom show slots, stop, and the running effect shown in HA; Fireworks fixed on type 75; thanks [nathandlawrence-bot](https://github.com/nathandlawrence-bot)
+- New device types 127 and 171
+- Fix: the MQTT receiver no longer dies on an HA restart when a device type is unknown
+- Connection watchdog timeout raised to 30 s (LED strip controllers were disconnecting)
+
 ### 0.0.8b1.dev1 (pre-release, refactor test)
 - TEST BUILD of the `claude-refactor` branch of cync-lan: a large reliability refactor done with Claude Code. Back up first
   and report problems at https://github.com/baudneo/cync-lan/issues
